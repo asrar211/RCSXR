@@ -38,7 +38,7 @@ type categoryProps = {
 }
 function CategoryCard({categoryTitle, categoryLength, categoryImage}: categoryProps) {
     return (
-        <div className="rounded-xl shadow-md md:w-75 md:h-70 w-55 h-65 pb-5 group hover:shadow-xl transition-all duration-300 ease-in-out">
+        <div className="rounded-xl shadow-md md:w-75 md:h-70 w-50 h-60 pb-5 group hover:shadow-xl transition-all duration-300 ease-in-out">
                 <div className="w-full h-[80%] overflow-hidden rounded-t-xl">
                     <img className="w-full h-full object-cover rounded-t-xl group-hover:scale-105  mask-b-from-70% transition-all duration-300 ease-in-out" src={categoryImage} alt={categoryTitle} />
                 </div>
