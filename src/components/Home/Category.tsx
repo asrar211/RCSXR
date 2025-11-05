@@ -5,7 +5,7 @@ export const Category = () => {
         <div className="relative">
         <h1 className="text-center text-4xl font-semibold">Shop By Category</h1>
         <div className="h-1 w-12 absolute left-1/2 -translate-x-1/2 bg-black rounded-full mt-2"></div>
-        <p className="text-center text-neutral-500 font-light mt-8">Find the perfect attire for your needs from our curated collections</p>
+        <p className="text-center text-neutral-500 font-light mt-8 w-[90%] mx-auto">Find the perfect attire for your needs from our curated collections</p>
         </div>
 
         <div className="max-w-7xl mx-auto flex flex-wrap gap-5 my-10 justify-center items-center">
@@ -38,7 +38,7 @@ type categoryProps = {
 }
 function CategoryCard({categoryTitle, categoryLength, categoryImage}: categoryProps) {
     return (
-        <div className="rounded-xl shadow-md md:w-75 md:h-70 w-50 h-60 pb-5 group hover:shadow-xl transition-all duration-300 ease-in-out">
+        <div className="rounded-xl shadow-md md:w-75 md:h-70 w-45 h-55 pb-5 group hover:shadow-xl transition-all duration-300 ease-in-out">
                 <div className="w-full h-[80%] overflow-hidden rounded-t-xl">
                     <img className="w-full h-full object-cover rounded-t-xl group-hover:scale-105  mask-b-from-70% transition-all duration-300 ease-in-out" src={categoryImage} alt={categoryTitle} />
                 </div>
