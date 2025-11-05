@@ -1,4 +1,5 @@
-import { IconShoppingCart, IconStarFilled } from "@tabler/icons-react"
+import { IconHeart, IconHeartFilled, IconShoppingCart, IconStarFilled } from "@tabler/icons-react"
+import { useState } from "react"
 
 export const FeaturedProducts = () => {
   return (
@@ -52,12 +53,20 @@ type FeaturedProductProps = {
   discount: number
 }
 function FeaturedProductCard ({title, price, ratings, img, category, discount}: FeaturedProductProps) {
+
+  const [wishlist , setWishlist] = useState<boolean>(false);
   return (
     <div className="cursor-pointer rounded-xl shadow-md sm:w-75 sm:h-120 w-[90%] h-130 pb-5 group hover:shadow-xl hover:ring-2 ring-neutral-300 transition-all duration-300 ease-in-out">
             <div className="relative w-full sm:h-[65%] h-[70%] overflow-hidden rounded-t-xl">
                 <img className="w-full h-full object-cover object-top rounded-t-xl group-hover:scale-105 transition-all duration-300 ease-in-out" src={img} alt="" />
                 <div className="bg-white text-neutral-800 shadow-sm font-serif border border-neutral-300 absolute w-fit top-2 left-2 text-[12px] rounded-lg px-1 py-0.5">{category}</div>
                 <div className="bg-red-600 text-orange-300 absolute w-fit top-2 right-2 text-[12px] rounded-lg px-1 py-0.5">{discount}% OFF</div>
+                <div
+                onClick={() => setWishlist(!wishlist)}
+                className={`invisible group-hover:visible transition-all duration-300 ease-in-out bg-neutral-600 text-orange-300 absolute w-fit bottom-2 right-2 text-[12px] rounded-lg px-1 py-0.5 cursor-pointer ${
+                wishlist ? "scale-110" : "scale-100"}`}>
+  {wishlist ? <IconHeartFilled /> : <IconHeart />}
+</div>
             </div>
             <div className="mx-5 flex flex-col gap-1">
               <h4 className="pt-5 text-[17px]">{title}</h4>
