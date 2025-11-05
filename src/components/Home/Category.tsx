@@ -8,7 +8,7 @@ export const Category = () => {
         <p className="text-center text-neutral-500 font-light mt-8 w-[90%] mx-auto">Find the perfect attire for your needs from our curated collections</p>
         </div>
 
-        <div className="max-w-7xl mx-auto flex flex-wrap gap-5 my-10 justify-center items-center">
+        <div className="max-w-7xl mx-auto flex flex-wrap gap-2 md:gap-5 my-10 justify-center items-center">
             <CategoryCard 
             categoryTitle="Top Wear"
             categoryLength="13 Products"
