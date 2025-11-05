@@ -63,11 +63,11 @@ function FeaturedProductCard ({title, price, ratings, img, category, discount}: 
                 <div className="bg-red-600 text-orange-300 absolute w-fit top-2 right-2 text-[12px] rounded-lg px-1 py-0.5">{discount}% OFF</div>
                 <div
                 onClick={() => setWishlist(!wishlist)}
-                className={`invisible group-hover:visible transition-all duration-300 ease-in-out bg-neutral-600 text-orange-300 absolute w-fit bottom-2 right-2 text-[12px] rounded-lg px-1 py-0.5 cursor-pointer ${
+                className={`md:invisible group-hover:visible transition-all duration-300 ease-in-out bg-neutral-600 text-orange-300 absolute w-fit bottom-2 right-2 text-[12px] rounded-lg px-1 py-0.5 cursor-pointer ${
                 wishlist ? "scale-110" : "scale-100"}`}>
   {wishlist ? <IconHeartFilled /> : <IconHeart />}
 </div>
-            </div>
+            </div> 
             <div className="mx-5 flex flex-col gap-1">
               <h4 className="pt-5 text-[17px]">{title}</h4>
               <div className="flex items-center gap-2">
