@@ -2,7 +2,7 @@ import { IconArrowRight, IconTruck, IconClock } from "@tabler/icons-react"
 export const Hero = () => {
   return (
     <div className="relative">
-    <div className="flex justify-between xl:h-[70vh] h-[60vh] max-w-7xl mx-auto">
+    <div className="flex justify-between h-[70vh] max-w-7xl mx-auto">
         <div className="w-full h-full pt-20 xl:pt-36 pl-3">
             <p className="bg-neutral-200 rounded-lg text-[12.5px] font-semibold w-fit py-1 px-3 text-neutral-900">Right Choice Srinagar</p>
             <h1 className="md:text-[65px] text-4xl text-neutral-900 md:font-bold font-semibold tracking-tighter md:leading-17 mt-5">Your One-Stop Shop <span className="bg-clip-text text-transparent bg-linear-to-r from-neutral-900 to-neutral-400">for Kids.</span></h1>
