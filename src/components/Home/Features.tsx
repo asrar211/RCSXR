@@ -1,4 +1,4 @@
-import { IconCheckbox, IconClock, IconStar, IconTruck, IconTruckDelivery } from "@tabler/icons-react"
+import { IconCheckbox, IconClock, IconStar, IconTruckDelivery } from "@tabler/icons-react"
 
 export const Features = () => {
   return (
