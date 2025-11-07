@@ -28,7 +28,7 @@ export const Cart = () => {
             className="bg-black/40 w-screen h-screen fixed z-100 top-0 left-0"
           ></div>
 
-          <div className="fixed xl:w-[400px] xl:h-screen bg-white overflow-y-scroll xl:top-0 xl:right-0 bottom-0 z-101 h-[60%] w-full shadow-[inset_1px_-1px_5px_rgba(0,0,0,0.5)]">
+          <div className="fixed xl:w-[400px] xl:h-screen bg-white overflow-y-scroll xl:top-0 xl:right-0 bottom-0 z-101 h-[60%] w-full shadow-[inset_1px_-1px_5px_rgba(0,0,0,0.5)] rounded-t-xl xl:rounded-none">
             <div className="flex justify-between mx-5 mt-5">
               <h1 className="font-medium text-[15px]">Shopping Cart</h1>
               <span onClick={handleClick} className="rotate-45 cursor-pointer">
