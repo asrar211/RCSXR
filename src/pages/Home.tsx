@@ -1,7 +1,9 @@
+import { Banner } from "../components/Home/Banner"
 import { Category } from "../components/Home/Category"
 import { FeaturedProducts } from "../components/Home/FeaturedProducts"
 import { Features } from "../components/Home/Features"
 import { Hero } from "../components/Home/Hero"
+import { Lower } from "../components/Home/Lower"
 import { Testimonials } from "../components/Home/Testimonials"
 
 export const Home = () => {
@@ -12,6 +14,8 @@ export const Home = () => {
       <FeaturedProducts/>
       <Features/>
       <Testimonials/>
+      <Lower/>
+      <Banner/>
     </div>
   )
 }
