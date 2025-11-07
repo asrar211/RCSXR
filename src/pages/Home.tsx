@@ -1,5 +1,6 @@
 import { Category } from "../components/Home/Category"
 import { FeaturedProducts } from "../components/Home/FeaturedProducts"
+import { Features } from "../components/Home/Features"
 import { Hero } from "../components/Home/Hero"
 
 export const Home = () => {
@@ -8,6 +9,7 @@ export const Home = () => {
       <Hero/>
       <Category/>
       <FeaturedProducts/>
+      <Features/>
     </div>
   )
 }

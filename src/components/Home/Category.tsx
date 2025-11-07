@@ -1,7 +1,7 @@
 
 export const Category = () => {
   return (
-    <div className="mt-32">
+    <div className="md:my-32 my-10">
         <div className="relative">
         <h1 className="text-center text-4xl font-semibold">Shop By Category</h1>
         <div className="h-1 w-12 absolute left-1/2 -translate-x-1/2 bg-black rounded-full mt-2"></div>

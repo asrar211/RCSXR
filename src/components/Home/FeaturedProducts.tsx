@@ -1,9 +1,9 @@
-import { IconHeart, IconHeartFilled, IconShoppingCart, IconStarFilled } from "@tabler/icons-react"
+import { IconArrowRight, IconHeart, IconHeartFilled, IconShoppingCart, IconStarFilled } from "@tabler/icons-react"
 import { useState } from "react"
 
 export const FeaturedProducts = () => {
   return (
-    <div className="mt-32">
+    <div className="md:py-28 py-10 bg-neutral-100/80">
       <div className="relative">
         <h1 className="text-center text-4xl font-semibold">Featured Products</h1>
         <div className="h-1 w-12 absolute left-1/2 -translate-x-1/2 bg-black rounded-full mt-2"></div>
@@ -40,6 +40,12 @@ export const FeaturedProducts = () => {
           discount={10}
           img="https://img.freepik.com/free-photo/close-up-decorative-blue-shoe_23-2147630318.jpg?t=st=1762348688~exp=1762352288~hmac=5544367b7e292436cd0f81925510724f4e354350cdd696830101f998d9da1be7&w=1060"/>
         </div>
+
+        <div className="flex justify-center items-center">
+  <button className="bg-white px-6 py-3.5 rounded-md shadow-sm ring-1 ring-neutral-200 text-[14px] hover:bg-neutral-100 transition-all duration-300 ease-in-out w-fit flex gap-2 items-center justify-center group hover:shadow-lg">
+    View All Products <span className="group-hover:translate-x-1.5 transition-all translate-y-0.5 duration-300 ease-in-out"><IconArrowRight size={16}/></span>
+  </button>
+</div>
     </div>
   )
 }
