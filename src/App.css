@@ -1,3 +1,9 @@
 body {
     background: var(--color-neutral-50);
 }
+
+.white-mask {
+  -webkit-mask-image: linear-gradient(to bottom, white 30%, transparent 100%);
+  mask-image: linear-gradient(to bottom, white 40%, transparent 100%);
+  background-color: white;
+}
