@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="relative xl:max-w-7xl xl:mx-auto py-15 flex flex-col xl:flex-row justify-between mx-5">
         <div>
           <div className="flex flex-col">
-            <h4 className="text-xl font-semibold bg-clip-text text-transparent bg-linear-to-r from-neutral-800 to-neutral-500">RightChoice</h4>
+            <h4 className="text-2xl font-semibold bg-clip-text text-transparent bg-linear-to-r from-neutral-800 to-neutral-200">RightChoice</h4>
           <p className="text-sm font-light text-neutral-500 mt-3">Your One-Stop Shop for Kids.</p>
           <div className="flex items-center gap-5 mt-5">
             <span className="p-1 shadow-sm rounded-full hover:bg-neutral-100 hover:shadow-md transition-all duration-300 ease-in-out">

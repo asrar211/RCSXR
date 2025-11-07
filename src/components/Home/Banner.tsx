@@ -6,7 +6,7 @@ export const Banner = () => {
   return (
     <>
     {show && (
-        <div className="bg-yellow-400 rounded-xl mx-5">
+        <div className="bg-yellow-400 rounded-xl mx- mb-5">
         <div className="max-w-360 mx-auto py-4 flex gap-5 xl:flex-row flex-col items-center">
         <p className="text-sky-800 font-semibold text-shadow-2xs text-center">Bring joy home with RightChoice. Shop toys, clothes, and essentials your kids love. Every purchase supports smiles and comfort. Shop now, it matters.</p>
         <div className="flex gap-3 items-center">
