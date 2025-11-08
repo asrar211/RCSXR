@@ -173,8 +173,8 @@ export const Products = () => {
   };
 
   return (
-    <div className="pt-20 mx-5 mt-10 mr-20">
-      <div className="flex xl:flex-row justify-between xl:items-center flex-col">
+    <div className="pt-20 mt-10 xl:mr-20">
+      <div className="flex xl:flex-row justify-between xl:items-center flex-col mx-5">
         <div className="flex flex-col">
           <h1 className="text-3xl font-semibold">Products</h1>
           <p className="text-neutral-500 font-light text-[17px]">
