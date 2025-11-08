@@ -3,7 +3,7 @@ export const Login = () => {
   return (
     <div className="pt-17 flex items-center max-[64rem]:h-screen w-full">
         <div className="w-[50%] hidden lg:flex h-screen">
-          <img clasaName="w-full h-full object-cover object-top" src="https://img.freepik.com/free-photo/cute-little-girl-shopping_624325-3892.jpg?t=st=1762584710~exp=1762588310~hmac=6fb5a7bc3e3fa2fc27f6fe58866c03547ddc55c572ef89077ef1ead0df181866&w=360" alt="image" />
+          <img className="w-full h-full object-cover object-top" src="https://img.freepik.com/free-photo/cute-little-girl-shopping_624325-3892.jpg?t=st=1762584710~exp=1762588310~hmac=6fb5a7bc3e3fa2fc27f6fe58866c03547ddc55c572ef89077ef1ead0df181866&w=360" alt="image" />
         </div>
         <div className="flex flex-col max-w-3xl mx-auto">
           <div>
