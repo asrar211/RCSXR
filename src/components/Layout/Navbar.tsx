@@ -54,8 +54,8 @@ export const Navbar = () => {
             ))}
 
             <div className="flex gap-5 mt-10">
-               <button className=" text-[12.5px] shadow-md px-5 py-2 rounded-md hover:bg-neutral-200 hover:shadow-lg hover:shadow-black/30 transition-all duration-300 ease-in-out">Log in</button>
-          <button className=" text-[12.5px] bg-neutral-900 text-white px-5 py-2 rounded-md hover:bg-neutral-700 hover:shadow-sm hover:shadow-black/30 transition-all duration-300 ease-in-out">Sign up</button>
+               <button className=" text-[12.5px] shadow-md px-5 py-2 rounded-md hover:bg-neutral-200 hover:shadow-lg hover:shadow-black/30 transition-all duration-300 ease-in-out"><Link to='auth/signin'>Log in</Link></button>
+          <button className=" text-[12.5px] bg-neutral-900 text-white px-5 py-2 rounded-md hover:bg-neutral-700 hover:shadow-sm hover:shadow-black/30 transition-all duration-300 ease-in-out"><Link to='auth/signup'>Sign Up</Link></button>
             </div>
               <p className="mt-5 text-sm text-neutral-400 font-light tracking-widest pb-1">@Right Choice, Srinagar</p>
             </div>  
