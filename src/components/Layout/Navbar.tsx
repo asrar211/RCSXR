@@ -32,8 +32,8 @@ export const Navbar = () => {
           <span className="bg-white relative p-1.5 rounded-full border border-neutral-200 hover:shadow-md hover:shadow-black/20 hover:bg-neutral-100 transition-all duration-300 ease-in-out"><IconShoppingCart size={20}/>
           <span className="absolute -right-1.5 -top-1.5 bg-black text-white text-[10px] px-1.5 py-0.5 rounded-full">{2}</span>
           </span>
-          <button className="hidden md:flex text-[12.5px] shadow-md px-3 py-1.5 rounded-md hover:bg-neutral-200 hover:shadow-lg hover:shadow-black/30 transition-all duration-300 ease-in-out"><Link to='/auth/signin'>Log in</Link></button>
-          <button className="hidden md:flex text-[12.5px] bg-neutral-900 text-white px-3 py-1.5 rounded-md hover:bg-neutral-700 hover:shadow-sm hover:shadow-black/30 transition-all duration-300 ease-in-out"><Link to="/auth/signup">Sign up</Link></button>
+          <button className="hidden md:flex text-[12.5px] shadow-md px-3 py-1.5 rounded-md hover:bg-neutral-200 hover:shadow-lg hover:shadow-black/30 transition-all duration-300 ease-in-out"><Link to='/signin'>Log in</Link></button>
+          <button className="hidden md:flex text-[12.5px] bg-neutral-900 text-white px-3 py-1.5 rounded-md hover:bg-neutral-700 hover:shadow-sm hover:shadow-black/30 transition-all duration-300 ease-in-out"><Link to="/signup">Sign up</Link></button>
           <span className="bg-white relative p-1.5 rounded-full shadow-md hover:shadow-md hover:shadow-black/30 hover:bg-neutral-100 transition-all duration-300 ease-in-out"><IconSun size={20}/></span>
         <button onClick={() => setIsOpen(true)} className="md:hidden bg-white relative p-1.5 rounded-md shadow-md hover:shadow-lg hover:shadow-black/30 hover:bg-neutral-100 transition-all duration-300 ease-in-out"><IconMenu2 size={20}/></button>
         </div>
@@ -44,6 +44,7 @@ export const Navbar = () => {
               <button onClick={() => setIsOpen(false)} className=" absolute right-2 top-2 p-1.5 shadow-md bg-white rounded-md hover:bg-neutral-100 hover:shadow-lg"><IconX size={20}/></button>
               {links.map((link, idx) => (
               <NavLink
+              onClick={() => setIsOpen(false)}
               className={({ isActive }) =>
             `text-lg transition duration-200 ease-in-out cursor-pointer ${
               isActive ? "font-semibold" : "text-neutral-500"}`
@@ -54,8 +55,8 @@ export const Navbar = () => {
             ))}
 
             <div className="flex gap-5 mt-10">
-               <button className=" text-[12.5px] shadow-md px-5 py-2 rounded-md hover:bg-neutral-200 hover:shadow-lg hover:shadow-black/30 transition-all duration-300 ease-in-out"><Link to='auth/signin'>Log in</Link></button>
-          <button className=" text-[12.5px] bg-neutral-900 text-white px-5 py-2 rounded-md hover:bg-neutral-700 hover:shadow-sm hover:shadow-black/30 transition-all duration-300 ease-in-out"><Link to='auth/signup'>Sign Up</Link></button>
+               <button onClick={() => setIsOpen(false)} className=" text-[12.5px] shadow-md px-5 py-2 rounded-md hover:bg-neutral-200 hover:shadow-lg hover:shadow-black/30 transition-all duration-300 ease-in-out"><Link to='/signin'>Log in</Link></button>
+          <button onClick={() => setIsOpen(false)} className=" text-[12.5px] bg-neutral-900 text-white px-5 py-2 rounded-md hover:bg-neutral-700 hover:shadow-sm hover:shadow-black/30 transition-all duration-300 ease-in-out"><Link to='/signup'>Sign Up</Link></button>
             </div>
               <p className="mt-5 text-sm text-neutral-400 font-light tracking-widest pb-1">@Right Choice, Srinagar</p>
             </div>  
