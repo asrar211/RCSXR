@@ -7,6 +7,7 @@ import { Layout } from './components/Layout/Layout.tsx'
 import { Login } from './pages/Login.tsx'
 import { Signup } from './pages/Signup.tsx'
 import { Products } from './pages/Products.tsx'
+import { ProductsProvider } from './context/ProductsContext.tsx'
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,8 @@ const router = createBrowserRouter([
 ])
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <ProductsProvider>
+      <RouterProvider router={router}/>
+    </ProductsProvider>
   </StrictMode>,
 )

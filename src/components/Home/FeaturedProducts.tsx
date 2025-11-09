@@ -99,7 +99,7 @@ function FeaturedProductCard({
         </div>
 
         <div className="bg-red-600 text-white font-medium absolute top-2 right-2 text-[12px] rounded-md px-2 py-0.5 shadow-md">
-          -{discount}%
+          {discount}% OFF
         </div>
 
         <div
@@ -130,9 +130,9 @@ function FeaturedProductCard({
 
 
         <p className="flex gap-2 items-center text-[15px] font-medium mt-1">
-          <span>${(price - (price * discount) / 100).toFixed(2)}</span>
+          <span>${price}</span>
           <span className="text-xs text-neutral-500 line-through">
-            ${price.toFixed(2)}
+            ${Math.ceil(price / (1 - discount / 100))}
           </span>
         </p>
 

@@ -7,19 +7,7 @@ import {
   IconChevronRight,
 } from "@tabler/icons-react";
 import { useState } from "react";
-
-type Product = {
-  id: number;
-  name: string;
-  description: string;
-  category: string;
-  price: number;
-  discount: number;
-  finalPrice: number;
-  image: string;
-  rating: number;
-  stock: number;
-};
+import type { Product } from "../types/Product";
 
 export const Products = () => {
   const products: Product[] = [
@@ -172,6 +160,7 @@ export const Products = () => {
     if (currentPage > 1) setCurrentPage((p) => p - 1);
   };
 
+
   return (
     <div className="pt-20 mt-10 xl:mr-20">
       <div className="flex xl:flex-row justify-between xl:items-center flex-col mx-5">
@@ -228,6 +217,8 @@ function ProductCard({ product }: { product: Product }) {
   const filledStars = Math.floor(product.rating);
   const halfStar = product.rating - filledStars >= 0.5;
 
+  const originalPrice = Math.ceil((product.price)/ (1 - product.discount / 100));
+
   return (
     <div className="bg-white rounded-xl shadow-md border border-neutral-200 hover:shadow-lg transition-all duration-300 ease-in-out flex flex-col">
       <div className="relative w-full aspect-square overflow-hidden rounded-t-xl">
@@ -276,10 +267,10 @@ function ProductCard({ product }: { product: Product }) {
 
         <div className="mt-2 flex items-center gap-2">
           <p className="text-[15px] font-semibold text-neutral-800">
-            ${product.finalPrice}
+            ${product.price}
           </p>
           <p className="text-[13px] text-neutral-500 line-through">
-            ${product.price}
+            ${originalPrice}
           </p>
         </div>
 
