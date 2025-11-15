@@ -6,6 +6,7 @@ import {
   IconStarFilled,
 } from "@tabler/icons-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const FeaturedProducts = () => {
   return (
@@ -55,12 +56,12 @@ export const FeaturedProducts = () => {
       </div>
 
       <div className="flex justify-center items-center">
-        <button className="bg-white px-6 py-3.5 rounded-md shadow-sm ring-1 ring-neutral-200 text-[14px] hover:bg-neutral-100 transition-all duration-300 ease-in-out w-fit flex gap-2 items-center justify-center group hover:shadow-lg">
+        <Link to='/products'><button className="bg-white px-6 py-3.5 rounded-md shadow-sm ring-1 ring-neutral-200 text-[14px] hover:bg-neutral-100 transition-all duration-300 ease-in-out w-fit flex gap-2 items-center justify-center group hover:shadow-lg">
           View All Products{" "}
           <span className="group-hover:translate-x-1.5 transition-all duration-300 ease-in-out">
             <IconArrowRight size={16} />
           </span>
-        </button>
+        </button></Link>
       </div>
     </div>
   );

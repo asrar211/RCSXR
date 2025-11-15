@@ -1,7 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import {IconMenu2, IconShoppingCart, IconSun, IconX } from '@tabler/icons-react';
 import { useState } from "react";
+import { Cart } from "../Home/Cart";
+import { useCart } from "../../hooks/useCart";
 export const Navbar = () => {
+    const [showCart, setShowCart] = useState(false);
+  const { totalQuantity } = useCart();
+
   const links = [
     { path: '/', name: 'Home' },
     { path: '/products', name: 'Products' },
@@ -10,6 +15,8 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
+    <>
+      {showCart && <Cart setShowCart={setShowCart}/>}
     <div className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
       <div className="relative max-w-7xl mx-auto flex justify-between items-center px-6 py-4.5">
         <div className="flex items-center gap-6">
@@ -29,8 +36,17 @@ export const Navbar = () => {
         </div>
 
         <div className="flex gap-3 items-center">
-          <span className="bg-white relative p-1.5 rounded-full border border-neutral-200 hover:shadow-md hover:shadow-black/20 hover:bg-neutral-100 transition-all duration-300 ease-in-out"><IconShoppingCart size={20}/>
-          <span className="absolute -right-1.5 -top-1.5 bg-black text-white text-[10px] px-1.5 py-0.5 rounded-full">{2}</span>
+          <span
+            onClick={() => setShowCart(true)}
+            className="relative bg-white p-1.5 rounded-full border border-neutral-200 hover:bg-neutral-100 hover:shadow-md cursor-pointer"
+          >
+            <IconShoppingCart size={20} />
+
+            {totalQuantity > 0 && (
+              <span className="absolute -right-1.5 -top-1.5 bg-black text-white text-[10px] px-1.5 py-0.5 rounded-full">
+                {totalQuantity}
+              </span>
+            )}
           </span>
           <button className="hidden md:flex text-[12.5px] shadow-md px-3 py-1.5 rounded-md hover:bg-neutral-200 hover:shadow-lg hover:shadow-black/30 transition-all duration-300 ease-in-out"><Link to='/signin'>Log in</Link></button>
           <button className="hidden md:flex text-[12.5px] bg-neutral-900 text-white px-3 py-1.5 rounded-md hover:bg-neutral-700 hover:shadow-sm hover:shadow-black/30 transition-all duration-300 ease-in-out"><Link to="/signup">Sign up</Link></button>
@@ -65,5 +81,6 @@ export const Navbar = () => {
       </div>
      <div className="h-px w-full bg-neutral-300" />
     </div>
+    </>
   );
 };

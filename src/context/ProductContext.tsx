@@ -77,8 +77,17 @@ export const ProductProvider = ({ children }: {children: React.ReactNode}) => {
 
     return (
         <ProductContext.Provider 
-        value={{ products, loading, error, fetchProducts, getProductById, addProduct, updateProduct, deleteProduct, getProductsByCategory }}
-        >
+        value={{ 
+            products, 
+            loading, 
+            error, 
+            fetchProducts, 
+            getProductById, 
+            addProduct, 
+            updateProduct, 
+            deleteProduct, 
+            getProductsByCategory 
+        }}>
             {children}
         </ProductContext.Provider>
     )
